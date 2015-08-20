@@ -211,9 +211,9 @@ var lifeView = new LifeView(document.getElementById('grid'), 12);
 
     $('#autoplay').addEventListener('change', function () {
         buttons.next.disabled = this.checked;
+        lifeView.autoplay = this.checked;
 
         if (this.checked) {
-            lifeView.autoplay = this.checked;
             lifeView.next();
         } else {
             clearTimeout(lifeView.timer);
