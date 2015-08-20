@@ -22,6 +22,22 @@ h1 {
     border: 1px solid gray;
 }
 
+/* Animation for created boxes for Chrome */
+@-webkit-keyframes birth {
+    50% {
+        box-shadow: 0 0 0 99px green inset;
+    }
+}
+
+/* Animation for created boxes */
+@keyframes birth {
+    50% {
+        box-shadow: 0 0 0 99px green inset;
+    }
+}
+
+/* Add animation for faded boxes */
+
 #grid input[type="checkbox"] {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -29,12 +45,15 @@ h1 {
     width: 20px;
     height: 20px;
     border: 0px;
-    background: yellow;
+    background: white;
 }
 
 #grid input[type="checkbox"]:checked {
-    background: black;
     box-shadow: 0 0 0 99px black inset;
+    animation: birth 1s;
+    /* Animation for newly created boxes */
+    -webkit-animation: birth 1s;
+    animation: birth 1s;
 }
 
 button,
